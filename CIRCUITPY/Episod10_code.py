@@ -74,13 +74,14 @@ else:
 
     while True:
         chat_id, message_in = read_message()
+        
         if message_in == "/start":
-            send_message(chat_id, "Welcome to Telegram Bot!")
+            send_message(chat_id, "Selamat Datang ke Telegram Bot!")
         elif message_in == "LED ON":
             led.value = True
-            send_message(chat_id, "LED turn on.")
+            send_message(chat_id, "LED menyala.")
         elif message_in == "LED OFF":
             led.value = False
-            send_message(chat_id, "LED turn off.")
+            send_message(chat_id, "LED padam.")
         else:
-            send_message(chat_id, "Command is not available.")
+            send_message(chat_id, "Tiada arahan.")
